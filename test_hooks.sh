@@ -2,6 +2,7 @@
 
 list_of_regex=(
                 "^(eyJ)[A-Za-z0-9_=\-]{30,}\.(eyJ)[A-Za-z0-9_=\-]{1,}\." 
+                "^([Ss](ecret)|[Pp](assword))(:\s)[A-Za-z0-9_=\-]{1,}" 
                 )
 
 for t in ${list_of_regex[@]}; do
