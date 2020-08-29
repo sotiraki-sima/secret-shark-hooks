@@ -13,5 +13,6 @@ chmod +x .git/hooks/pre-commit
 
 ## Use
 ```
+git add .
 git commit -m "Test commit to see the hook working"
 ```
