@@ -1,8 +1,9 @@
 #!/bin/sh
 
 list_of_regex=(
-                "^(eyJ)[A-Za-z0-9_=\-]{30,}\.(eyJ)[A-Za-z0-9_=\-]{1,}\." 
-                "^([Ss](ecret)|[Pp](assword))(:\s)[A-Za-z0-9_=\-]{1,}" 
+                "(eyJ)[A-Za-z0-9_=\-]{30,}\.(eyJ)[A-Za-z0-9_=\-]{20,}\.[A-Za-z0-9_=\-]{20,}"  # JWT
+                "(([Ss][Ee][Cc][Rr][Ee][Tt])|([Pp][Aa][Ss][Ss][Ww][Oo][Rr][Dd]))(\s){0,1}[=:]{1}(\s){0,1}[A-Za-z0-9_=\-]{5,}" # PASSWORD
+                "(aws_access_key_id)(\s){0,1}[=:]{0,1}(\s){0,1}[A-Za-z0-9_=\-]{20}" # aws_access_key_id = (20)
                 )
 
 for t in ${list_of_regex[@]}; do
